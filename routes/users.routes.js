@@ -9,7 +9,6 @@ import {
 
 const userRoutes = express.Router();
 
-userRoutes.route("/").get(getAllUsers);
 userRoutes.route("/signUp").post(createUser);
 userRoutes.route("/login").post(loginUser);
 
