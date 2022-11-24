@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import defaultRouter from "./routes/default.routes.js";
+import userRoutes from "./routes/users.routes.js";
 mongoose.Promise = global.Promise;
 // create express app
 const app = express();
@@ -40,3 +41,4 @@ mongoose.connection.on("error", (err) => {
 
 // call the routers
 app.use("/", defaultRouter);
+app.use("/api/users", userRoutes);
