@@ -7,24 +7,6 @@ import _ from "loadsh";
 import bcrypt from "bcrypt";
 import e from "express";
 
-export const getAllUsers = async (req, res, next) => {
-  try {
-    const users = await get_all_users();
-    if (_.isEmpty(users) === true) {
-      res.status(200).json({
-        message: "Opps, There is no user availabe",
-      });
-    } else {
-      res.status(200).json({
-        data: users,
-      });
-    }
-  } catch (error) {
-    res.status(500).json({
-      error: error.message,
-    });
-  }
-};
 // create new user
 export const createUser = async (req, res, next) => {
   try {
