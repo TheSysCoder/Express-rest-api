@@ -1,5 +1,4 @@
 import {
-  get_all_users,
   create_new_user,
   get_user_by_email,
 } from "../services/user.services.js";
