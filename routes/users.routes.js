@@ -1,9 +1,5 @@
 import express from "express";
-import {
-  createUser,
-  getAllUsers,
-  loginUser,
-} from "../controllers/users.controller.js";
+import { createUser, loginUser } from "../controllers/users.controller.js";
 
 // users routes
 
